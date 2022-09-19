@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>goit-markup-hw-04</title>
+		<title>goit-markup-hw-05</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -66,7 +66,19 @@
 						<br />
 						вашого бізнесу
 					</h1>
-					<button class="button primary" type="button">Замовити послугу</button>
+					<button class="button primary" type="button" data-modal-open>Замовити послугу</button>
+				</div>
+
+				<!-- модальне вікно -->
+
+				<div class="backdrop is-hidden" data-modal>
+					<div class="modal">
+						<button class="modal-button" type="button" data-modal-close>
+							<svg width="18px" height="18px">
+								<use href="/images/icons.svg#icon-close-black"></use>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</section>
 
@@ -123,13 +135,30 @@
 					<h2 class="section-title">Чим ми займаємося</h2>
 					<ul class="list work">
 						<li class="item">
-							<img src="./images/what-we-do/box1.jpg" alt="печатает на клавиатуре" width="370" height="294" />
+							<div class="thumb-work">
+								<img src="./images/what-we-do/box1.jpg" alt="печатает на клавиатуре" width="370" height="294" />
+
+								<p class="label">Десктопні додатки</p>
+							</div>
 						</li>
+
 						<li class="item">
-							<img src="./images/what-we-do/box2.jpg" alt="работа с приложениями в телефоне" width="370" height="294" />
+							<div class="thumb-work">
+								<img
+									src="./images/what-we-do/box2.jpg"
+									alt="работа с приложениями в телефоне"
+									width="370"
+									height="294"
+								/>
+								<p class="label">Мобільні додатки</p>
+							</div>
 						</li>
+
 						<li class="item">
-							<img src="./images/what-we-do/box3.jpg" alt="работа с цветом на планшете" width="370" height="294" />
+							<div class="thumb-work">
+								<img src="./images/what-we-do/box3.jpg" alt="работа с цветом на планшете" width="370" height="294" />
+								<p class="label">Дизайнерські рішення</p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -441,5 +470,6 @@
 				</div>
 			</footer>
 		</main>
+		<script src="/js/modal.js"></script>
 	</body>
 </html>
